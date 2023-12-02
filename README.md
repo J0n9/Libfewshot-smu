@@ -20,4 +20,24 @@ config = Config("./5shot/config.yaml").get_config_dict()
 
 ![image](https://github.com/J0n9/Libfewshot-smu/assets/77601178/a4e607b2-0f39-431b-9418-2ae67344fd13)
 
+其他超参数：
+``
+seed: 0
+shot_num: 5
+tag: null
+tb_scale: 1.0
+test_episode: 300
+test_epoch: 5
+test_query: 11
+test_shot: 5
+test_way: 5
+train_episode: 300
+use_loss_yaml: true
+use_memory: false
+val_per_epoch: 1
+warmup: 0
+way_num: 5
+workers: 8
+``
+
 具体训练模型详见5shot文件夹下config.yaml
