@@ -4,7 +4,7 @@
 复现：在run_trainer.py文件下修改：
 
 ````
-config = Config("5shot/config.yaml").get_config_dict()
+config = Config("./5shot/config.yaml").get_config_dict()
 `````
 
 使用SKDModel-Gen0做为classifier并加载了预先训练效果较为理想的SKDModel的cls、emb部分
