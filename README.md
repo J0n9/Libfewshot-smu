@@ -29,6 +29,7 @@ config = Config("./5shot/config.yaml").get_config_dict()
 
 其他超参数：
 ``
+query_num: 11
 seed: 0
 shot_num: 5
 tag: null
