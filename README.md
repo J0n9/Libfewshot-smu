@@ -1,5 +1,12 @@
 # Libfewshot-smu
 ## 1shot
+复现：在run_trainer.py文件下修改：
+
+````
+config = Config("./1shot/config.yaml").get_config_dict()
+`````
+
+
 ## 5shot
 复现：在run_trainer.py文件下修改：
 
