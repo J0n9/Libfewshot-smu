@@ -6,6 +6,67 @@
 config = Config("./1shot/config.yaml").get_config_dict()
 `````
 
+使用SKDModel-Gen0做为classifier并加载了预先训练效果较为理想的SKDModel的cls、emb部分
+
+````
+cls_classifier_path: ./1shot/checkpoints/cls_classifier_best.pth
+
+emb_func_path: ./1shot/checkpoints/emb_func_best.pth
+````
+
+在数据预处理阶段使用了数据增强
+
+````
+augment: true
+
+augment_times: 5
+
+augment_times_query: 1
+````
+
+
+其他超参数：
+
+````
+query_num: 15
+
+seed: 0
+
+shot_num: 1
+
+tag: null
+
+tb_scale: 1.0
+
+test_episode: 1000
+
+test_epoch: 5
+
+test_query: 15
+
+test_shot: 1
+
+test_way: 5
+
+train_episode: 300
+
+use_loss_yaml: true
+
+use_memory: false
+
+val_per_epoch: 1
+
+warmup: 0
+
+way_num: 5
+
+workers: 8
+````
+
+具体训练模型详见5shot文件夹下config.yaml
+
+
+
 
 ## 5shot
 复现：在run_trainer.py文件下修改：
