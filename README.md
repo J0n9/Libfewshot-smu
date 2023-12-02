@@ -29,7 +29,8 @@ emb_func_path: ./5shot/checkpoints/emb_func_best.pth
 
 由于学习率对模型训练的影响，我们发现在一些特定的epoch上模型很快过拟合，因此使用了MultissssStepLR作为学习率的调整程序，分别在epoch为30、40、50、60、70、80和100上进行学习率的衰减以减少模型过拟合效果
 
-`
+````
+
 lr_scheduler:
 
   kwargs:
@@ -53,11 +54,11 @@ lr_scheduler:
     - 100
     
   name: MultiStepLR
-  
-`
+````
 
 其他超参数：
 ``
+
 query_num: 11
 
 seed: 0
