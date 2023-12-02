@@ -24,6 +24,16 @@ augment_times: 5
 augment_times_query: 1
 ````
 
+使用了StepLR学习率调节程序每5个epoch将学习率降低0.9倍：
+
+````
+lr_scheduler:
+  kwargs:
+    gamma: 0.9
+    step_size: 5
+  name: StepLR
+````
+
 
 其他超参数：
 
@@ -63,7 +73,7 @@ way_num: 5
 workers: 8
 ````
 
-具体训练模型详见5shot文件夹下config.yaml
+具体训练模型详见1shot文件夹下config.yaml
 
 
 
