@@ -87,11 +87,20 @@ workers: 8
 
 
 ## 5shot
-复现：在run_trainer.py文件下修改：
+复现：
+
+在run_trainer.py文件下修改：
 
 ````
 config = Config("./5shot/config.yaml").get_config_dict()
 `````
+
+在终端中输入：
+
+````
+python run_trainer.py
+````
+
 
 使用SKDModel-Gen0做为classifier并加载了预先训练效果较为理想的SKDModel的cls、emb部分。预先训练的SKDModel的cls、emb部分是由多组训练调参所得到的效果较好的模型所保存，这个过程是SKDModel迭代的过程
 
