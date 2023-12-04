@@ -26,9 +26,7 @@ emb_func_path: ./1shot/checkpoints/emb_func_best.pth
 
 ````
 augment: true
-
 augment_times: 5
-
 augment_times_query: 1
 ````
 
@@ -47,9 +45,7 @@ lr_scheduler:
 
 ````
 query_num: 15
-
 seed: 0
-
 shot_num: 1
 
 tag: null
