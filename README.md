@@ -18,7 +18,6 @@ python run_trainer.py
 
 ````
 cls_classifier_path: ./1shot/checkpoints/cls_classifier_best.pth
-
 emb_func_path: ./1shot/checkpoints/emb_func_best.pth
 ````
 
@@ -47,33 +46,19 @@ lr_scheduler:
 query_num: 15
 seed: 0
 shot_num: 1
-
 tag: null
-
 tb_scale: 1.0
-
 test_episode: 1000
-
 test_epoch: 5
-
 test_query: 15
-
 test_shot: 1
-
 test_way: 5
-
 train_episode: 300
-
 use_loss_yaml: true
-
 use_memory: false
-
 val_per_epoch: 1
-
 warmup: 0
-
 way_num: 5
-
 workers: 8
 ````
 
@@ -102,7 +87,6 @@ python run_trainer.py
 
 ````
 cls_classifier_path: /home/yangxinzhe/WebCaricature/SMU_V4/1shot/checkpoints/cls_classifier_best.pth # 在复现训练效果时可将路径修改为: ./5shot/checkpoints/cls_classifier_best.pth
-
 emb_func_path: /home/yangxinzhe/WebCaricature/SMU_V4/1shot/checkpoints/emb_func_path.pth # 在复现训练效果时可将路径修改为: ./5shot/checkpoints/emb_func_best.pth
 ````
 
@@ -112,9 +96,7 @@ emb_func_path: /home/yangxinzhe/WebCaricature/SMU_V4/1shot/checkpoints/emb_func_
 
 ````
 augment: true
-
 augment_times: 5
-
 augment_times_query: 1
 ````
 
@@ -124,27 +106,16 @@ augment_times_query: 1
 
 ````
 lr_scheduler:
-
   kwargs:
-  
     gamma: 0.9
-    
     milestones:
-    
     - 30
-
     - 40
-    
     - 50
-    
     - 60
-    
     - 70
-    
     - 80
-    
     - 100
-    
   name: MultiStepLR
 ````
 
@@ -152,37 +123,21 @@ lr_scheduler:
 
 ````
 query_num: 11
-
 seed: 0
-
 shot_num: 5
-
 tag: null
-
 tb_scale: 1.0
-
 test_episode: 300
-
 test_epoch: 5
-
 test_query: 11
-
 test_shot: 5
-
 test_way: 5
-
 train_episode: 300
-
 use_loss_yaml: true
-
 use_memory: false
-
 val_per_epoch: 1
-
 warmup: 0
-
 way_num: 5
-
 workers: 8
 ````
 
