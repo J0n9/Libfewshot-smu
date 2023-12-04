@@ -14,12 +14,12 @@ config = Config("./1shot/config.yaml").get_config_dict()
 python run_trainer.py
 ````
 
-使用SKDModel-Gen0做为classifier并加载了预先训练效果较为理想的SKDModel的cls、emb部分，这个过程实际上是SKDModel迭代的过程
+使用SKDModel-Gen0做为classifier并加载了预先训练效果较为理想的SKDModel的cls、emb部分，预先训练的SKDModel的cls、emb部分是由多组训练调参所得到的效果较好的模型所保存，这个过程实际上是SKDModel迭代的过程
 
 ````
-cls_classifier_path: ./1shot/checkpoints/cls_classifier_best.pth
-emb_func_path: ./1shot/checkpoints/emb_func_best.pth
-````
+cls_classifier_path: /home/yangxinzhe/WebCaricature/SMU_V4/1shot/checkpoints/cls_classifier_best.pth # 在复现训练效果时可将路径修改为: ./1shot/checkpoints/cls_classifier_best.pth
+emb_func_path: /home/yangxinzhe/WebCaricature/SMU_V4/1shot/checkpoints/emb_func_path.pth # 在复现训练效果时可将路径修改为: ./1shot/checkpoints/cls_classifier_best.pth
+```` 
 
 在数据预处理阶段使用了数据增强
 
