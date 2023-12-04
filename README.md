@@ -29,14 +29,19 @@ augment_times: 5
 augment_times_query: 1
 ````
 
-使用了StepLR学习率调节程序每5个epoch将学习率降低0.9倍：
+使用了MulStepLR学习率调节程序在epoch分别为：40、55、70、85、100处将学习率降低0.5倍以减小模型的过拟合：
 
 ````
 lr_scheduler:
   kwargs:
-    gamma: 0.9
-    step_size: 5
-  name: StepLR
+    gamma: 0.5
+    milestones:
+    - 40
+    - 55
+    - 70
+    - 85
+    - 100
+  name: MultiStepLR
 ````
 
 
