@@ -62,7 +62,7 @@ way_num: 5
 workers: 8
 ````
 
-具体训练模型详见1shot文件夹下config.yaml
+具体训练过程详见1shot文件夹下config.yaml
 
 
 
@@ -141,4 +141,4 @@ way_num: 5
 workers: 8
 ````
 
-具体训练模型详见5shot文件夹下config.yaml
+具体训练过程详见5shot文件夹下config.yaml
