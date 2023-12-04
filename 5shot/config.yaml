@@ -1,0 +1,95 @@
+augment: true
+augment_times: 5
+augment_times_query: 1
+backbone:
+  kwargs:
+    avg_pool: true
+    is_flatten: true
+    keep_prob: 0.0
+    maxpool_last2: true
+  name: resnet12
+batch_size: 8
+classifier:
+  kwargs:
+    alpha: 2.0
+    cls_classifier_path: /home/yangxinzhe/WebCaricature/SMU_V4/1shot/checkpoints/cls_classifier_best.pth
+    emb_func_path: /home/yangxinzhe/WebCaricature/SMU_V4/1shot/checkpoints/emb_func_best.pth
+    feat_dim: 640
+    gamma: 1.0
+    is_distill: false
+    num_class: 200
+  name: SKDModel
+data_root: /home/yangxinzhe/WebCaricature
+dataloader_num: 1
+deterministic: true
+device_ids: 2
+episode_size: 1
+epoch: 120
+image_size: 84
+includes:
+- headers/data.yaml
+- headers/device.yaml
+- headers/misc.yaml
+- headers/model.yaml
+- headers/optimizer.yaml
+- classifiers/SKD.yaml
+- backbones/resnet12.yaml
+log_interval: 100
+log_level: info
+log_name: null
+log_paramerter: false
+loss:
+  kwargs: null
+  name: CrossEntropyLoss
+lr_scheduler:
+  kwargs:
+    gamma: 0.9
+    milestones:
+    - 30
+    - 40
+    - 50
+    - 60
+    - 70
+    - 80
+    - 100
+  name: MultiStepLR
+n_gpu: 1
+optimizer:
+  kwargs:
+    lr: 0.01
+    momentum: 0.9
+    weight_decay: 0.0005
+  name: SGD
+  other:
+    emb_func: 0.05
+parallel_part:
+- emb_func
+- cls_classifier
+- rot_classifier
+port: 31511
+pretrain_path: null
+query_num: 11
+rank: 0
+result_root: ./results
+resume: false
+save_interval: 10
+save_part:
+- emb_func
+- cls_classifier
+- rot_classifier
+seed: 0
+shot_num: 5
+tag: null
+tb_scale: 1.0
+test_episode: 300
+test_epoch: 5
+test_query: 11
+test_shot: 5
+test_way: 5
+train_episode: 300
+use_loss_yaml: true
+use_memory: false
+val_per_epoch: 1
+warmup: 0
+way_num: 5
+workers: 8
